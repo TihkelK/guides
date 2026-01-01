@@ -9,11 +9,15 @@ sudo apt install -y wireguard
 ## Client side
 ### Add config file to wireguard directory:
 ```
-sudo cp </path/to/file.conf> /etc/wireguard/wg0.conf
+sudo cp </path/to/file.conf> /etc/wireguard/[vpn-name].conf
 ```
 ### Activate connection with:
 ```
-sudo wg-quick up wg0
+sudo wg-quick up [vpn-name]
+```
+#### Optional: Enable startup with:
+```
+sudo systemctl enable wg-quick@[vpn-name]
 ```
 
 <br>
