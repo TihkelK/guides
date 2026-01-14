@@ -13,7 +13,7 @@ sudo cp </path/to/file.conf> /etc/wireguard/[vpn-name].conf
 ```
 ### Activate connection with:
 ```
-sudo wg-quick up [vpn-name]
+sudo systemctl restart wg-quick@[vpn-name]
 ```
 #### Optional: Enable startup with:
 ```
